@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="display-6" style="margin: 2rem;">Busqueda en Youtube</h1>
+
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <label for="busqueda" class="form-label">Busca algo:</label>
+                <input type="text" class="form-control" id="busqueda" aria-describedby="busqueda" name="busqueda"
+                    [(ngModel)]="valorBusqueda">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="buscarVideos(valorBusqueda)">Buscar</button>
+        </form>
+    
+    
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID Video</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Enlace al Video</th>
+                    <th scope="col">Canal Youtube</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let r of resultados">
+                    <th scope="row"><a data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="seleccionarVideo(r)">{{r.id}}</a></th>
+                    <td>{{r.title}}</td>
+                    <td><a href={{r.url}} target="_blank">Ver video</a></td>
+                    <td>{{r.channel.name}} <img src={{r.channel.icon}} alt="399"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Cancion Elegida</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Titulo: {{videoSeleccionado?.title}} <br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

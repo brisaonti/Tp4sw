@@ -1,0 +1,17 @@
+<p>juego-de-preguntas works!</p>
+<div>
+    <h1>Juego de preguntas</h1>
+    <p>Iteración: {{ iteracion }} de 8</p>
+    <p>Aciertos: {{ aciertos }}</p>
+    <p>Errores: {{ errores }}</p>
+    <p>Palabra: {{ palabra }}</p>
+    <p>¿Cuántas {{ caracteristica }} tiene la palabra?</p>
+    <ul>
+      <li><button (click)="responder(1)">{{ opcion1 }}</button></li>
+      <li><button (click)="responder(2)">{{ opcion2 }}</button></li>
+      <li><button (click)="responder(3)">{{ opcion3 }}</button></li>
+      <li><button (click)="responder(4)">{{ opcion4 }}</button></li>
+    </ul>
+  </div>
+
+

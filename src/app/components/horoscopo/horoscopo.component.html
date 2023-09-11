@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>QUE TE PASARA</h1>
+    <main class="container-fluid">
+        <div class="container d-flex flex-column">
+            <div class="row">
+                <h2 class="text-center p-3">-----Los Signos del Zodiaco-----</h2>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img1.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('aries')">Aries</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img2.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('touro')">Tauro</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img3.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('gemeos')">Geminis</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img4.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('cancer')">Cancer</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img5.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('lião')">Leo</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img6.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('virgem')">Virgo</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img7.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('libra')">Libra</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img8.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('escorpiao')">Escorpio</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img9.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <!---EL NOMBRE DE SAGITARIO NO ME LO RECONOCE-->
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('sagitário')">Sagitario</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img10.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('capricornio')">Capricornio</button>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img11.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('aquario')">Acuario</button>
+
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-lg-4 col-md-6 col-sm-6 col-6 text-center mt-4">
+                    <div class="p-3">
+                        <img src="assets/signos/img12.png" width="150px" alt="">
+                    </div>
+                    <div class="pb-3">
+                       
+                        <button class="btn btn-primary" (click)="obtenerTextoHoroscopo('peixes')">Picis</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="col-12 mt-3 mb-3">
+                <h4 class="h2 bg-success p-3 text-white">Libra - MES</h4>
+                <div class="d-flex justify-content-center p-3">
+                    <article class="col-8">
+                        <h3>Horoscopo Diario para {{signoElegido}}</h3>
+                        <p>{{textoDelSigno}}</p>
+                    </article>
+                    <img id="img1" src="img/signos/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
